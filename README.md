@@ -31,7 +31,7 @@ Optional steps for convenience:
 
 ## Closing the Programs
 
-To close all opened programs, simply close Mod Organizer. SML will automatically close all associated programs (Mantella, and xVASynth) as well.
+To close all opened programs, simply close Mod Organizer. SML will automatically close all associated programs (Mantella and xVASynth) as well.
 
 **Note:** SML will only open and close additional programs (LLM and Herika) if the respective options in the Config.xml file are set to true.
 
