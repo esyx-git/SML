@@ -46,4 +46,4 @@ This project is licensed under the [GPL v3.0 License](https://opensource.org/lic
 
 ## Acknowledgments
 
-- Mantella, Herika, and xVASynth developers for their fantastic work.
+- Mantella, Herika, xVASynth, and Mod Organizer developers for all of their fantastic work.
