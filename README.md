@@ -15,7 +15,7 @@ Before using SML, you must specify the path to each program within the provided 
    - For example: `<LLM>true</LLM>`
 5. Save the Config.xml file.
 
-**Important:** Make sure that both the Config.xml file and the Skyrim Launcher executable file are located in the same folder.
+**Important:** Make sure that both the Config.xml file and the SML executable file are located in the same folder.
 
 ## Running the Launcher
 
