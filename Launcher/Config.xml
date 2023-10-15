@@ -1,0 +1,5 @@
+<Configuration>
+    <ModOrganizer>C:\Path\To\ModOrganizer.exe</ModOrganizer>
+    <Mantella>C:\Path\To\Mantella.exe</Mantella>
+    <xVASynth>C:\Path\To\xVASynth.exe</xVASynth>
+</Configuration>
