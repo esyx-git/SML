@@ -1,5 +1,13 @@
 <Configuration>
-    <ModOrganizer>C:\Path\To\ModOrganizer.exe</ModOrganizer>
+
+	<ModOrganizer>C:\Path\To\ModOrganizer.exe</ModOrganizer>
     <Mantella>C:\Path\To\Mantella.exe</Mantella>
     <xVASynth>C:\Path\To\xVASynth.exe</xVASynth>
+	
+	<LLM>C:\Path\To\LLM.exe</LLM>
+	<Herika>C:\Path\To\Herika.exe</Herika>
+
+	<UseLLM>false</UseLLM>
+	<UseHerika>false</UseHerika>
+	
 </Configuration>
