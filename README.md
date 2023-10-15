@@ -12,7 +12,7 @@ Before using SML, you must specify the path to each program within the provided 
 3. Update the path within each `<Program>` tag to point to the respective program's executable file on your computer.
    - For example: `<ModOrganizer>C:\Path\To\ModOrganizer.exe</ModOrganizer>`
 4. If you are using LLM and/or Herika, set the respected <UseProgram> tag to true and set the correct path, otherwise ignore this step. (LLM and Herika paths can be left alone if their tags are set to false.)
-   - For example: '<LLM>true</LLM>'
+   - For example: `<LLM>`true`</LLM>`
 5. Save the Config.xml file.
 
 **Important:** Make sure that both the Config.xml file and the Skyrim Launcher executable file are located in the same folder.
