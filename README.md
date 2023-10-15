@@ -25,8 +25,9 @@ Optional steps for convenience:
 
 1. Create a shortcut to the launcher executable file for easy access.
 2. Customize the shortcut's icon to differentiate it from other shortcuts.
-3. Optionally, pin the shortcut to your start menu for quicker access.
-4. Profit?
+3. Set the shortcut to open as minimized to promote cleaner access.
+4. Optionally, pin the shortcut to your start menu for quicker access.
+5. Profit?
 
 ## Closing the Programs
 
