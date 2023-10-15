@@ -46,4 +46,4 @@ This project is licensed under the [GPL v3.0 License](https://opensource.org/lic
 
 ## Acknowledgments
 
-- Mantella developers for their fantastic mod.
+- Mantella, Herika, and xVASynth developers for their fantastic work.
