@@ -38,7 +38,7 @@ To close all opened programs, simply close Mod Organizer. SML will automatically
 
 If you encounter any issues or have questions, please feel free to reach out for support.
 
-**Note** The launcher may not close associated programs properly if they are manually opened and closed, but this should not have any catastrophic results other than a mild inconveniece.
+**Note:** The launcher may not close associated programs properly if they are manually opened and closed, but this should not have any catastrophic results other than a mild inconveniece.
 
 ## License
 
