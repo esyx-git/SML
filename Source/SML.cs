@@ -15,9 +15,9 @@ namespace SML
 
             string executable1 = doc.SelectSingleNode("/Configuration/ModOrganizer").InnerText;
             string executable2 = doc.SelectSingleNode("/Configuration/Mantella").InnerText;
-            string executable3 = doc.SelectSingleNode("/Configuration/xVASynth").InnerText;
-            string executable4 = doc.SelectSingleNode("/Configuration/LLM").InnerText;
-            string executable5 = doc.SelectSingleNode("/Configuration/Herika").InnerText;
+            string executable3 = doc.SelectSingleNode("/Configuration/LLM").InnerText;
+            string executable4 = doc.SelectSingleNode("/Configuration/Herika").InnerText;
+            string executable5 = doc.SelectSingleNode("/Configuration/xVASynth").InnerText;
 
             string directory1 = Path.GetDirectoryName(executable1);
             string directory2 = Path.GetDirectoryName(executable2);
@@ -25,42 +25,50 @@ namespace SML
             string directory4 = Path.GetDirectoryName(executable4);
             string directory5 = Path.GetDirectoryName(executable5);
 
-            bool useExecutable4 = bool.Parse(doc.SelectSingleNode("/Configuration/UseLLM").InnerText);
-            bool useExecutable5 = bool.Parse(doc.SelectSingleNode("/Configuration/UseHerika").InnerText);
+            bool useExecutable3 = bool.Parse(doc.SelectSingleNode("/Configuration/UseLLM").InnerText);
+            bool useExecutable4 = bool.Parse(doc.SelectSingleNode("/Configuration/UseHerika").InnerText);
+            bool useExecutable5 = bool.Parse(doc.SelectSingleNode("/Configuration/UsexVASynth").InnerText);
 
 
-            Console.WriteLine("Opening Mod Organizer.");
+            Console.WriteLine("Opening Mod Organizer and monitoring process.");
 
             ProcessStartInfo startInfo = new ProcessStartInfo(executable1);
             startInfo.WorkingDirectory = directory1;
             Process mainProcess = Process.Start(startInfo);
 
-            Console.WriteLine("Watching Mod Organizer process.");
-
-            Console.WriteLine("Opening Mantella and xVASynth.");
+            Console.WriteLine("Opening Mantella and monitoring process.");
 
             ProcessStartInfo startInfo2 = new ProcessStartInfo(executable2);
             startInfo2.WorkingDirectory = directory2;
             startInfo2.WindowStyle = ProcessWindowStyle.Minimized;
             Process process2 = Process.Start(startInfo2);
 
-            ProcessStartInfo startInfo3 = new ProcessStartInfo(executable3);
-            startInfo3.WorkingDirectory = directory3;
-            startInfo3.WindowStyle = ProcessWindowStyle.Minimized;
-            Process process3 = Process.Start(startInfo3);
+            if (useExecutable3)
+            {
+                Console.WriteLine("Opening LLM and monitoring process.");
 
-            Console.WriteLine("Watching Mantella and xVASynth processes.");
+                ProcessStartInfo startInfo3 = new ProcessStartInfo(executable3);
+                startInfo3.WorkingDirectory = directory3;
+                startInfo3.WindowStyle = ProcessWindowStyle.Minimized;
+                Process process3 = Process.Start(startInfo3);
+
+                mainProcess.WaitForExit();
+
+                if (!process3.HasExited)
+                {
+                    process3.CloseMainWindow();
+                    process3.WaitForExit();
+                }
+            }
 
             if (useExecutable4)
             {
-                Console.WriteLine("Opening LLM.");
+                Console.WriteLine("Opening Herika and monitoring process.");
 
                 ProcessStartInfo startInfo4 = new ProcessStartInfo(executable4);
                 startInfo4.WorkingDirectory = directory4;
                 startInfo4.WindowStyle = ProcessWindowStyle.Minimized;
                 Process process4 = Process.Start(startInfo4);
-
-                Console.WriteLine("Watching LLM process.");
 
                 mainProcess.WaitForExit();
 
@@ -74,14 +82,12 @@ namespace SML
             if (useExecutable5)
             {
 
-                Console.WriteLine("Opening Herika.");
+                Console.WriteLine("Opening xVASynth and monitoring process.");
 
                 ProcessStartInfo startInfo5 = new ProcessStartInfo(executable5);
                 startInfo5.WorkingDirectory = directory5;
                 startInfo5.WindowStyle = ProcessWindowStyle.Minimized;
                 Process process5 = Process.Start(startInfo5);
-
-                Console.WriteLine("Watching Herika process.");
 
                 mainProcess.WaitForExit();
 
@@ -100,12 +106,6 @@ namespace SML
             {
                 process2.CloseMainWindow();
                 process2.WaitForExit();
-            }
-
-            if (!process3.HasExited)
-            {
-                process3.CloseMainWindow();
-                process3.WaitForExit();
             }
 
             Console.WriteLine("\nSuccess! This window will close in 3 seconds...");
