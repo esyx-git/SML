@@ -1,6 +1,6 @@
 # Simple Mantella Launcher (SML)
 
-SML is a simple and convenient launcher for Skyrim that is designed to automatically open, monitor, and close Mod Organizer, Mantella, and xVASynth for Windows users. (There is also support for a self-hosted LLM and Herika as well.)
+SML is a simple and convenient launcher for Skyrim that is designed to automatically open, monitor, and close Mod Organizer and Mantella for Windows users. (There is also support for a self-hosted LLM, Herika, and xVASynth as well.)
 It eliminates the need to open and close each program individually, providing a seamless experience for you, the user.
 
 ## Getting Started
@@ -36,9 +36,9 @@ Optional steps for convenience:
 
 ## Closing the Programs
 
-To close all opened programs, simply close Mod Organizer. SML will automatically close all associated programs (Mantella and xVASynth) as well.
+To close all opened programs, simply close Mod Organizer. SML will automatically close all associated programs as well.
 
-**Note:** SML will only open and close additional programs (LLM and Herika) if the respective options in the Config.xml file are set to true.
+**Note:** SML will only open and close additional programs (LLM, Herika, and/or xVASynth) if the respective options in the Config.xml file are set to true.
 
 ## Troubleshooting
 
