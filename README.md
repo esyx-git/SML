@@ -11,9 +11,13 @@ Before using SML, you must specify the path to each program within the provided 
 2. Locate the `<Program>` tags for each required program (Mod Organizer, Mantella, and xVASynth).
 3. Update the path within each `<Program>` tag to point to the respective program's executable file on your computer.
    - For example: `<ModOrganizer>C:\Path\To\ModOrganizer.exe</ModOrganizer>`
-4. If you are using LLM and/or Herika, set the respected <UseProgram> tag to true and set the correct path, otherwise ignore this step. (LLM and Herika paths can be left alone if their tags are set to false.)
+4. If you are using LLM and/or Herika, set the respected `<UseProgram>` tag to true and set the correct path, otherwise ignore this step. (LLM and Herika paths can be left alone if their tags are set to false.)
    - For example: `<LLM>true</LLM>`
-5. Save the Config.xml file.
+5. By default, Mantella handles running the xVASynth backend, and thus handling xVASynth within SML can be ignored. If you would like SML to handle xVASynth, however, set the `<UsexVASynth>` tag to true and update the path.
+   - The `<xVASynth>` tag will accept either the frontend `xVASynth.exe` or backend `server.exe` executable paths.
+   - Example backend CPU path (Steam): `<xVASynth>C:\Games\steamapps\common\xVASynth>.\resources\app\cpython_cpu\server.exe</xVASynth>`
+   - Example backend GPU path (Steam): `<xVASynth>C:\Games\steamapps\common\xVASynth>.\resources\app\cpython_gpu\server.exe</xVASynth>`
+7. Save the Config.xml file.
 
 **Important:** Make sure that both the Config.xml file and the SML executable file are located in the same folder.
 
